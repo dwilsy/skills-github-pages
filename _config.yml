@@ -1,3 +1,7 @@
 theme: minima
 author: Dom
 description: WRT4LYFE
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: kitian616 / jekyll-TeXt-theme # Replace with any public GitHub theme repo
