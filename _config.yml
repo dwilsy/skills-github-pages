@@ -1,21 +1,18 @@
-theme: jekyll-TeXt-theme
-author: Dom
-description: WRT4LYFE
+# GitHub Pages Remote Theme Config
 plugins:
   - jekyll-remote-theme
 
-remote_theme: kitian616 / jekyll-TeXt-theme # Replace with any public GitHub theme repo
-
-# Theme setting
 remote_theme: kitian616/jekyll-TeXt-theme
+
+# Site Details
+author: Dom
+description: WRT4LYFE
 
 # TeXt Theme Customization Settings
 site_text:
   title: Dwilsy's Page
   subtitle: Welcome to my blog!
 
-# Choose a skin: default, dark, blue, green, etc.
+# Theme Options
 theme_skin: dark
-
-# Enable MathJax/LaTeX support if needed
 mathjax: true
