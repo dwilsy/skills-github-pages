@@ -203,7 +203,7 @@ button { font: inherit; }
   font-family: var(--font-hero);
   font-style: italic;
   font-weight: 700;
-  font-size: min(40vw, 560px);
+  font-size: min(40vw, 620px);
   line-height: 1;
   color: rgba(255,255,255,.06);
   pointer-events: none;
