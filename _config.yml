@@ -12,5 +12,6 @@ highlight_theme: tomorrow-night
 title: Dwilsy's Page
 description: WRT4LYFE
 author: Dom
+baseurl: "/skills-github-pages"
 
-mathjax: true
+mathjax: trueokay gim
