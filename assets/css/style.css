@@ -198,12 +198,12 @@ button { font: inherit; }
 
 .hero-ghost-number {
   position: absolute;
-  right: -.3em;
-  bottom: -.28em;
+  right: -.2em;
+  bottom: -.4em;
   font-family: var(--font-hero);
   font-style: italic;
   font-weight: 700;
-  font-size: min(48vw, 620px);
+  font-size: min(40vw, 560px);
   line-height: 1;
   color: rgba(255,255,255,.06);
   pointer-events: none;
