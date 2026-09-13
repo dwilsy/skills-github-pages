@@ -5,3 +5,17 @@ plugins:
   - jekyll-remote-theme
 
 remote_theme: kitian616 / jekyll-TeXt-theme # Replace with any public GitHub theme repo
+
+# Theme setting
+remote_theme: kitian616/jekyll-TeXt-theme
+
+# TeXt Theme Customization Settings
+site_text:
+  title: Dwilsy's Page
+  subtitle: Welcome to my blog!
+
+# Choose a skin: default, dark, blue, green, etc.
+theme_skin: dark
+
+# Enable MathJax/LaTeX support if needed
+mathjax: true
