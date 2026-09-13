@@ -8,11 +8,12 @@ remote_theme: kitian616/jekyll-TeXt-theme
 author: Dom
 description: WRT4LYFE
 
-# TeXt Theme Customization Settings
+# TeXt Theme Settings Structure
+site:
+  skin: dark
+
 site_text:
   title: Dwilsy's Page
   subtitle: Welcome to my blog!
 
-# Theme Options
-theme_skin: "dark"
 mathjax: true
