@@ -1,207 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Walton Robotics | Team 2974</title>
-  <style>
-    /* CSS Variables for Light & Dark Mode */
-    :root {
-      --bg-color: #ffffff;
-      --text-main: #1f2937;
-      --text-muted: #4b5563;
-      --nav-bg: rgba(255, 255, 255, 0.85);
-      --card-bg: #f9fafb;
-      --primary-navy: #002855;
-      --primary-gold: #F2A900;
-      --border: #e5e7eb;
-      --shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-    }
-    
-    [data-theme="dark"] {
-      --bg-color: #0f172a;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --nav-bg: rgba(15, 23, 42, 0.85);
-      --card-bg: #1e293b;
-      --primary-navy: #60a5fa; /* Lighter blue for dark mode readability */
-      --primary-gold: #F2A900;
-      --border: #334155;
-      --shadow: 0 10px 15px -3px rgba(0,0,0,0.5);
-    }
+---
+layout: default
+title: Home
+description: "Team 2974, Walton Robotics — an FRC team from Marietta, Georgia fostering excellence, collaboration, and engineering innovation."
+---
 
-    /* Reset & Typography */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      transition: background 0.3s ease, color 0.3s ease;
-      line-height: 1.6;
-    }
-
-    /* Navigation - Modern Glassmorphism */
-    nav {
-      position: fixed;
-      top: 0; width: 100%;
-      background: var(--nav-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-    .logo { font-size: 1.5rem; font-weight: 900; color: var(--primary-gold); letter-spacing: -0.5px; }
-    .logo span { color: var(--primary-navy); }
-    
-    .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--primary-gold); }
-    
-    /* Theme Toggle Button */
-    .theme-switch {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      color: var(--text-main);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-    .theme-switch:hover { border-color: var(--primary-gold); }
-
-    /* Hero Section */
-    .hero {
-      padding: 10rem 5% 6rem;
-      text-align: center;
-      background: linear-gradient(180deg, var(--bg-color) 0%, var(--card-bg) 100%);
-    }
-    .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 1.5rem; color: var(--primary-navy); line-height: 1.1; }
-    .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 650px; margin: 0 auto 2.5rem; }
-    
-    .btn-primary {
-      background: var(--primary-gold); color: #000;
-      padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 800;
-      display: inline-block; transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-
-    /* Grid Layout for Sections */
-    .section { padding: 5rem 5%; }
-    .section-title { font-size: 2.25rem; font-weight: 800; margin-bottom: 3rem; text-align: center; color: var(--primary-navy); }
-    
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    /* Modern UI Cards */
-    .card {
-      background: var(--card-bg);
-      padding: 2.5rem;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-    .card:hover { transform: translateY(-5px); border-color: var(--primary-gold); }
-    .card h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem; color: var(--primary-navy); }
-    .card p { color: var(--text-muted); font-size: 1rem; }
-
-    /* Footer */
-    footer {
-      text-align: center; padding: 4rem 5%;
-      background: var(--card-bg); border-top: 1px solid var(--border);
-      color: var(--text-muted); font-weight: 500;
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <div class="logo">Walton<span>Robotics</span></div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#outreach">Outreach</a>
-      <a href="#sponsors">Sponsors</a>
-      <button class="theme-switch" id="theme-toggle">🌙 Dark</button>
+<section class="hero">
+  <span class="hero-ghost-number" aria-hidden="true">2974</span>
+  <div class="hero-inner">
+    <h1 class="hero-title">Building the future.<br>Inspiring the community.</h1>
+    <p class="hero-subtitle">
+      Walton Robotics Team 2974 — an FRC team from Marietta, Georgia, fostering
+      excellence, collaboration, and engineering innovation.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/outreach/' | relative_url }}">Explore Our Impact</a>
+      <a class="btn btn-outline" href="{{ '/sponsors/' | relative_url }}">Meet Our Sponsors</a>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <header class="hero">
-    <h1>FIRST Team 2974</h1>
-    <p>Designing competitive robots, fueling the STEM pipeline, and building the future in Marietta, GA since 2008.</p>
-    <a href="#outreach" class="btn-primary">See Our Impact</a>
-  </header>
+<section class="section who-we-are">
+  <div class="container who-grid">
 
-  <section id="about" class="section">
-    <h2 class="section-title">Who We Are</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>The Team</h3>
-        <p>With over 40 members, dedicated mentors, and supportive sponsors, Walton Robotics is a powerhouse in the FIRST Robotics Competition (FRC) sphere.</p>
-      </div>
-      <div class="card">
-        <h3>The Build</h3>
-        <p>We spend January through February utilizing mechanical assembly, CAD, and 3D printing to build highly competitive robots for the state and world championships.</p>
-      </div>
-      <div class="card">
-        <h3>The Community</h3>
-        <p>Operating out of our dedicated build site on the Walton High School campus, we are entirely funded by our non-profit foundation, parents, and corporate grants.</p>
+    <div class="who-copy">
+      <h2 class="section-heading">Who we are</h2>
+      <p>
+        Team 2974 operates like a professional engineering organization built by
+        students. From our design reviews to our outreach programs, we hold
+        ourselves to executive-level standards of communication, documentation,
+        and accountability — because that's the standard the FIRST community
+        deserves, and the standard that prepares our members for what comes
+        after high school.
+      </p>
+      <p>
+        Every season, our subteams — mechanical, electrical, programming,
+        business, and media — work as one organization toward a single robot
+        and a single mission: build excellent engineers and excellent people.
+      </p>
+    </div>
+
+    <div class="spec-plate">
+      <div class="spec-plate-head">Walt &amp; WaterGate</div>
+      <div class="spec-plate-body">
+        <p>
+          Walt is our mascot and WaterGate is our current competition robot —
+          the latest step in a build tradition that has carried Team 2974 to
+          events across the country and around the world.
+        </p>
+        <div class="spec-stats">
+          <div>
+            <span class="spec-stat-value">5</span>
+            <span class="spec-stat-label">Continents reached</span>
+          </div>
+          <div>
+            <span class="spec-stat-value">1</span>
+            <span class="spec-stat-label">Trip to space</span>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <section id="outreach" class="section">
-    <h2 class="section-title">Community & Outreach</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Destination Engineering</h3>
-        <p>We open our full-scale practice field to area teams, providing a collaborative space to fine-tune robot driving skills and iterate on programming during the competition season.</p>
-      </div>
-      <div class="card">
-        <h3>GirlsFIRST & STEM Camps</h3>
-        <p>Inspiring the next generation through hands-on summer camps, FLL tournaments, and targeted GirlsFIRST initiatives to close the gender gap in STEM.</p>
-      </div>
-      <div class="card">
-        <h3>FTC Pipelines</h3>
-        <p>We sponsor FIRST Tech Challenge programs for middle school students, ensuring younger innovators have a direct pathway into high school competitive robotics.</p>
-      </div>
+  </div>
+</section>
+
+<section class="section impact">
+  <div class="container">
+    <h2 class="section-heading">Impact &amp; community outreach</h2>
+    <p class="section-lede">
+      Walton Robotics runs three ongoing programs that bring engineering to
+      students long before they reach an FRC field.
+    </p>
+
+    <div class="impact-grid">
+
+      <article class="impact-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg>
+        <h3>GirlsFIRST</h3>
+        <p>Empowering women in STEM through dedicated community events built to grow the next generation of female engineers.</p>
+      </article>
+
+      <article class="impact-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>
+        <h3>FIRST LEGO League &amp; FTC</h3>
+        <p>Supporting Walton's junior robotics programs and hosting local FLL and FTC tournaments throughout the year.</p>
+      </article>
+
+      <article class="impact-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
+        <h3>Destination Engineering &amp; Summer Camps</h3>
+        <p>Hands-on youth camps and year-round practice field management that turn curiosity into real engineering skill.</p>
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>Backed by the Walton Robotics Foundation and our generous sponsors.</p>
-  </footer>
+<section class="section sponsors">
+  <div class="container">
+    <h2 class="section-heading">Our sponsors</h2>
+    <p class="section-lede">Sponsor logos are being updated — full recognition grid coming soon.</p>
 
-  <script>
-    // Pure Vanilla JS for Dark Mode Toggling
-    const toggleBtn = document.getElementById('theme-toggle');
-    const htmlEl = document.documentElement;
-    
-    // Check local storage so the site remembers the user's choice
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    htmlEl.setAttribute('data-theme', savedTheme);
-    updateButtonText(savedTheme);
+    <!-- Sponsor logos intentionally left blank for now. Replace each .sponsor-slot with an <img> once assets are ready. -->
+    <div class="sponsors-grid" aria-hidden="true">
+      <div class="sponsor-slot">Logo</div>
+      <div class="sponsor-slot">Logo</div>
+      <div class="sponsor-slot">Logo</div>
+      <div class="sponsor-slot">Logo</div>
+      <div class="sponsor-slot">Logo</div>
+    </div>
 
-    toggleBtn.addEventListener('click', () => {
-      const currentTheme = htmlEl.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      
-      htmlEl.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateButtonText(newTheme);
-    });
-
-    function updateButtonText(theme) {
-      toggleBtn.textContent = theme === 'light' ? '🌙 Dark' : '☀️ Light';
-    }
-  </script>
-</body>
-</html>
+    <p class="sponsors-note">
+      Team 2974 is grateful to the mentors, companies, and community partners
+      whose support makes every build season possible.
+    </p>
+  </div>
+</section>
