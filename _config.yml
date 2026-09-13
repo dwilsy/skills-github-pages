@@ -6,6 +6,7 @@ remote_theme: kitian616/jekyll-TeXt-theme
 
 # TeXt Theme Settings
 text_skin: dark
+highlight_theme: tomorrow-night
 
 # Site Details
 title: Dwilsy's Page
