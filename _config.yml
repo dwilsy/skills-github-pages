@@ -14,5 +14,5 @@ site_text:
   subtitle: Welcome to my blog!
 
 # Theme Options
-theme_skin: dark
+theme_skin: "dark"
 mathjax: true
