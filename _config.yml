@@ -4,16 +4,12 @@ plugins:
 
 remote_theme: kitian616/jekyll-TeXt-theme
 
+# TeXt Theme Settings
+text_skin: dark
+
 # Site Details
-author: Dom
+title: Dwilsy's Page
 description: WRT4LYFE
-
-# TeXt Theme Settings Structure
-site:
-  skin: dark
-
-site_text:
-  title: Dwilsy's Page
-  subtitle: Welcome to my blog!
+author: Dom
 
 mathjax: true
